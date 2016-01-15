@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92EB3229DAC226CBEBA083B1 /* libPods-TianDiTuWMTSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1C588B159F0F32B8CBF66 /* libPods-TianDiTuWMTSDemo.a */; };
+		BAA506C51C48C75500A60DBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506BF1C48C75500A60DBE /* ViewController.m */; };
+		BAA506C61C48C75500A60DBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506C41C48C75500A60DBE /* AppDelegate.m */; };
+		BAA506D91C48C76000A60DBE /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BAA506C81C48C76000A60DBE /* ArcGIS.bundle */; };
+		BAA506DA1C48C76000A60DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA506C91C48C76000A60DBE /* Assets.xcassets */; };
+		BAA506DB1C48C76000A60DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA506CA1C48C76000A60DBE /* LaunchScreen.storyboard */; };
+		BAA506DC1C48C76000A60DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA506CC1C48C76000A60DBE /* Main.storyboard */; };
+		BAA506DD1C48C76000A60DBE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAA506CE1C48C76000A60DBE /* Info.plist */; };
+		BAA506DE1C48C76000A60DBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506CF1C48C76000A60DBE /* main.m */; };
+		BAA506DF1C48C76000A60DBE /* TianMapCacheTile.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506D21C48C76000A60DBE /* TianMapCacheTile.m */; };
+		BAA506E01C48C76000A60DBE /* TianMapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506D41C48C76000A60DBE /* TianMapInfo.m */; };
+		BAA506E11C48C76000A60DBE /* TianMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506D61C48C76000A60DBE /* TianMapLayer.m */; };
+		BAA506E21C48C76000A60DBE /* TianMapOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA506D81C48C76000A60DBE /* TianMapOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA5C1AD71C46061B00EABA25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5C1AB51C46061A00EABA25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA5C1ABC1C46061A00EABA25;
+			remoteInfo = TianDiTuWMTSDemo;
+		};
+		BA5C1AE21C46061B00EABA25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5C1AB51C46061A00EABA25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA5C1ABC1C46061A00EABA25;
+			remoteInfo = TianDiTuWMTSDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AC69BC1F3C2E153F530455C /* Pods-TianDiTuWMTSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemoUITests/Pods-TianDiTuWMTSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		138B8E58A01AB554844C83AD /* Pods-TianDiTuWMTSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemoUITests/Pods-TianDiTuWMTSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D501C2762F82369E6775CD0 /* Pods-TianDiTuWMTSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemoTests/Pods-TianDiTuWMTSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		6452CECD54AF9FD52ED0915F /* Pods-TianDiTuWMTSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemo/Pods-TianDiTuWMTSDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9AB1C588B159F0F32B8CBF66 /* libPods-TianDiTuWMTSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TianDiTuWMTSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5C1ABD1C46061A00EABA25 /* TianDiTuWMTSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianDiTuWMTSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5C1AD61C46061B00EABA25 /* TianDiTuWMTSDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianDiTuWMTSDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5C1AE11C46061B00EABA25 /* TianDiTuWMTSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianDiTuWMTSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA506BE1C48C75500A60DBE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BAA506BF1C48C75500A60DBE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BAA506C31C48C75500A60DBE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAA506C41C48C75500A60DBE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAA506C81C48C76000A60DBE /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
+		BAA506C91C48C76000A60DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAA506CB1C48C76000A60DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAA506CD1C48C76000A60DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAA506CE1C48C76000A60DBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA506CF1C48C76000A60DBE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAA506D11C48C76000A60DBE /* TianMapCacheTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianMapCacheTile.h; sourceTree = "<group>"; };
+		BAA506D21C48C76000A60DBE /* TianMapCacheTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianMapCacheTile.m; sourceTree = "<group>"; };
+		BAA506D31C48C76000A60DBE /* TianMapInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianMapInfo.h; sourceTree = "<group>"; };
+		BAA506D41C48C76000A60DBE /* TianMapInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianMapInfo.m; sourceTree = "<group>"; };
+		BAA506D51C48C76000A60DBE /* TianMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianMapLayer.h; sourceTree = "<group>"; };
+		BAA506D61C48C76000A60DBE /* TianMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianMapLayer.m; sourceTree = "<group>"; };
+		BAA506D71C48C76000A60DBE /* TianMapOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianMapOperation.h; sourceTree = "<group>"; };
+		BAA506D81C48C76000A60DBE /* TianMapOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianMapOperation.m; sourceTree = "<group>"; };
+		DCF72B7E0AF8300E5EA77882 /* Pods-TianDiTuWMTSDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemoTests/Pods-TianDiTuWMTSDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE03DBE69467C53651CD1AB7 /* Pods-TianDiTuWMTSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianDiTuWMTSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianDiTuWMTSDemo/Pods-TianDiTuWMTSDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA5C1ABA1C46061A00EABA25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EB3229DAC226CBEBA083B1 /* libPods-TianDiTuWMTSDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1AD31C46061B00EABA25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1ADE1C46061B00EABA25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		560A1CA5997BFF35D5402ACC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6452CECD54AF9FD52ED0915F /* Pods-TianDiTuWMTSDemo.debug.xcconfig */,
+				EE03DBE69467C53651CD1AB7 /* Pods-TianDiTuWMTSDemo.release.xcconfig */,
+				DCF72B7E0AF8300E5EA77882 /* Pods-TianDiTuWMTSDemoTests.debug.xcconfig */,
+				3D501C2762F82369E6775CD0 /* Pods-TianDiTuWMTSDemoTests.release.xcconfig */,
+				138B8E58A01AB554844C83AD /* Pods-TianDiTuWMTSDemoUITests.debug.xcconfig */,
+				0AC69BC1F3C2E153F530455C /* Pods-TianDiTuWMTSDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C1E05F8217597490C5F48FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AB1C588B159F0F32B8CBF66 /* libPods-TianDiTuWMTSDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA5C1AB41C46061A00EABA25 = {
+			isa = PBXGroup;
+			children = (
+				BA5C1ABF1C46061A00EABA25 /* TianDiTuWMTSDemo */,
+				BA5C1ABE1C46061A00EABA25 /* Products */,
+				560A1CA5997BFF35D5402ACC /* Pods */,
+				7C1E05F8217597490C5F48FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA5C1ABE1C46061A00EABA25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA5C1ABD1C46061A00EABA25 /* TianDiTuWMTSDemo.app */,
+				BA5C1AD61C46061B00EABA25 /* TianDiTuWMTSDemoTests.xctest */,
+				BA5C1AE11C46061B00EABA25 /* TianDiTuWMTSDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA5C1ABF1C46061A00EABA25 /* TianDiTuWMTSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506BB1C48C75500A60DBE /* Classes */,
+				BAA506C71C48C76000A60DBE /* Supporting Files */,
+			);
+			path = TianDiTuWMTSDemo;
+			sourceTree = "<group>";
+		};
+		BAA506BB1C48C75500A60DBE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506BC1C48C75500A60DBE /* Main */,
+				BAA506C21C48C75500A60DBE /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BAA506BC1C48C75500A60DBE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506BD1C48C75500A60DBE /* Controller */,
+				BAA506C01C48C75500A60DBE /* Model */,
+				BAA506C11C48C75500A60DBE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BAA506BD1C48C75500A60DBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506BE1C48C75500A60DBE /* ViewController.h */,
+				BAA506BF1C48C75500A60DBE /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAA506C01C48C75500A60DBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAA506C11C48C75500A60DBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAA506C21C48C75500A60DBE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506C31C48C75500A60DBE /* AppDelegate.h */,
+				BAA506C41C48C75500A60DBE /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BAA506C71C48C76000A60DBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506C81C48C76000A60DBE /* ArcGIS.bundle */,
+				BAA506C91C48C76000A60DBE /* Assets.xcassets */,
+				BAA506CA1C48C76000A60DBE /* LaunchScreen.storyboard */,
+				BAA506CC1C48C76000A60DBE /* Main.storyboard */,
+				BAA506CE1C48C76000A60DBE /* Info.plist */,
+				BAA506CF1C48C76000A60DBE /* main.m */,
+				BAA506D01C48C76000A60DBE /* TianMapLayer */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAA506D01C48C76000A60DBE /* TianMapLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BAA506D11C48C76000A60DBE /* TianMapCacheTile.h */,
+				BAA506D21C48C76000A60DBE /* TianMapCacheTile.m */,
+				BAA506D31C48C76000A60DBE /* TianMapInfo.h */,
+				BAA506D41C48C76000A60DBE /* TianMapInfo.m */,
+				BAA506D51C48C76000A60DBE /* TianMapLayer.h */,
+				BAA506D61C48C76000A60DBE /* TianMapLayer.m */,
+				BAA506D71C48C76000A60DBE /* TianMapOperation.h */,
+				BAA506D81C48C76000A60DBE /* TianMapOperation.m */,
+			);
+			path = TianMapLayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA5C1ABC1C46061A00EABA25 /* TianDiTuWMTSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5C1AEA1C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemo" */;
+			buildPhases = (
+				C441CF79F6A3735C192E1D07 /* Check Pods Manifest.lock */,
+				BA5C1AB91C46061A00EABA25 /* Sources */,
+				BA5C1ABA1C46061A00EABA25 /* Frameworks */,
+				BA5C1ABB1C46061A00EABA25 /* Resources */,
+				2678E321701E3DAF3B6521C9 /* Embed Pods Frameworks */,
+				4A7972D072001AA60E2F774E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TianDiTuWMTSDemo;
+			productName = TianDiTuWMTSDemo;
+			productReference = BA5C1ABD1C46061A00EABA25 /* TianDiTuWMTSDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA5C1AD51C46061B00EABA25 /* TianDiTuWMTSDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5C1AED1C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemoTests" */;
+			buildPhases = (
+				5AE96EA675D7EF9A656C3AE4 /* Check Pods Manifest.lock */,
+				BA5C1AD21C46061B00EABA25 /* Sources */,
+				BA5C1AD31C46061B00EABA25 /* Frameworks */,
+				BA5C1AD41C46061B00EABA25 /* Resources */,
+				378621D392881CC397D7B8BA /* Embed Pods Frameworks */,
+				D6E02F1C5B4AE45C86A4A67D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA5C1AD81C46061B00EABA25 /* PBXTargetDependency */,
+			);
+			name = TianDiTuWMTSDemoTests;
+			productName = TianDiTuWMTSDemoTests;
+			productReference = BA5C1AD61C46061B00EABA25 /* TianDiTuWMTSDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA5C1AE01C46061B00EABA25 /* TianDiTuWMTSDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5C1AF01C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemoUITests" */;
+			buildPhases = (
+				181BE192F16D0BE41307A4E9 /* Check Pods Manifest.lock */,
+				BA5C1ADD1C46061B00EABA25 /* Sources */,
+				BA5C1ADE1C46061B00EABA25 /* Frameworks */,
+				BA5C1ADF1C46061B00EABA25 /* Resources */,
+				34FBAF65875129612D65C85C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA5C1AE31C46061B00EABA25 /* PBXTargetDependency */,
+			);
+			name = TianDiTuWMTSDemoUITests;
+			productName = TianDiTuWMTSDemoUITests;
+			productReference = BA5C1AE11C46061B00EABA25 /* TianDiTuWMTSDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA5C1AB51C46061A00EABA25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Henry;
+				TargetAttributes = {
+					BA5C1ABC1C46061A00EABA25 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = W8B5MRX38C;
+					};
+					BA5C1AD51C46061B00EABA25 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = W8B5MRX38C;
+						TestTargetID = BA5C1ABC1C46061A00EABA25;
+					};
+					BA5C1AE01C46061B00EABA25 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = W8B5MRX38C;
+						TestTargetID = BA5C1ABC1C46061A00EABA25;
+					};
+				};
+			};
+			buildConfigurationList = BA5C1AB81C46061A00EABA25 /* Build configuration list for PBXProject "TianDiTuWMTSDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA5C1AB41C46061A00EABA25;
+			productRefGroup = BA5C1ABE1C46061A00EABA25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA5C1ABC1C46061A00EABA25 /* TianDiTuWMTSDemo */,
+				BA5C1AD51C46061B00EABA25 /* TianDiTuWMTSDemoTests */,
+				BA5C1AE01C46061B00EABA25 /* TianDiTuWMTSDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA5C1ABB1C46061A00EABA25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA506DB1C48C76000A60DBE /* LaunchScreen.storyboard in Resources */,
+				BAA506DA1C48C76000A60DBE /* Assets.xcassets in Resources */,
+				BAA506D91C48C76000A60DBE /* ArcGIS.bundle in Resources */,
+				BAA506DD1C48C76000A60DBE /* Info.plist in Resources */,
+				BAA506DC1C48C76000A60DBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1AD41C46061B00EABA25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1ADF1C46061B00EABA25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		181BE192F16D0BE41307A4E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2678E321701E3DAF3B6521C9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianDiTuWMTSDemo/Pods-TianDiTuWMTSDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34FBAF65875129612D65C85C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianDiTuWMTSDemoUITests/Pods-TianDiTuWMTSDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		378621D392881CC397D7B8BA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianDiTuWMTSDemoTests/Pods-TianDiTuWMTSDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A7972D072001AA60E2F774E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianDiTuWMTSDemo/Pods-TianDiTuWMTSDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE96EA675D7EF9A656C3AE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C441CF79F6A3735C192E1D07 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E02F1C5B4AE45C86A4A67D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianDiTuWMTSDemoTests/Pods-TianDiTuWMTSDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA5C1AB91C46061A00EABA25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA506E21C48C76000A60DBE /* TianMapOperation.m in Sources */,
+				BAA506C61C48C75500A60DBE /* AppDelegate.m in Sources */,
+				BAA506DF1C48C76000A60DBE /* TianMapCacheTile.m in Sources */,
+				BAA506E01C48C76000A60DBE /* TianMapInfo.m in Sources */,
+				BAA506DE1C48C76000A60DBE /* main.m in Sources */,
+				BAA506E11C48C76000A60DBE /* TianMapLayer.m in Sources */,
+				BAA506C51C48C75500A60DBE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1AD21C46061B00EABA25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5C1ADD1C46061B00EABA25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA5C1AD81C46061B00EABA25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA5C1ABC1C46061A00EABA25 /* TianDiTuWMTSDemo */;
+			targetProxy = BA5C1AD71C46061B00EABA25 /* PBXContainerItemProxy */;
+		};
+		BA5C1AE31C46061B00EABA25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA5C1ABC1C46061A00EABA25 /* TianDiTuWMTSDemo */;
+			targetProxy = BA5C1AE21C46061B00EABA25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAA506CA1C48C76000A60DBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAA506CB1C48C76000A60DBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BAA506CC1C48C76000A60DBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAA506CD1C48C76000A60DBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA5C1AE81C46061B00EABA25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA5C1AE91C46061B00EABA25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA5C1AEB1C46061B00EABA25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6452CECD54AF9FD52ED0915F /* Pods-TianDiTuWMTSDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
+				INFOPLIST_FILE = "$(SRCROOT)/TianDiTuWMTSDemo/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"FMDB\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA5C1AEC1C46061B00EABA25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE03DBE69467C53651CD1AB7 /* Pods-TianDiTuWMTSDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
+				INFOPLIST_FILE = "$(SRCROOT)/TianDiTuWMTSDemo/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"FMDB\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BA5C1AEE1C46061B00EABA25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF72B7E0AF8300E5EA77882 /* Pods-TianDiTuWMTSDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TianDiTuWMTSDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TianDiTuWMTSDemo.app/TianDiTuWMTSDemo";
+			};
+			name = Debug;
+		};
+		BA5C1AEF1C46061B00EABA25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D501C2762F82369E6775CD0 /* Pods-TianDiTuWMTSDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TianDiTuWMTSDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TianDiTuWMTSDemo.app/TianDiTuWMTSDemo";
+			};
+			name = Release;
+		};
+		BA5C1AF11C46061B00EABA25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138B8E58A01AB554844C83AD /* Pods-TianDiTuWMTSDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TianDiTuWMTSDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TianDiTuWMTSDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BA5C1AF21C46061B00EABA25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AC69BC1F3C2E153F530455C /* Pods-TianDiTuWMTSDemoUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TianDiTuWMTSDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wurenxinbu.TianDiTuWMTSDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TianDiTuWMTSDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA5C1AB81C46061A00EABA25 /* Build configuration list for PBXProject "TianDiTuWMTSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5C1AE81C46061B00EABA25 /* Debug */,
+				BA5C1AE91C46061B00EABA25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5C1AEA1C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5C1AEB1C46061B00EABA25 /* Debug */,
+				BA5C1AEC1C46061B00EABA25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5C1AED1C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5C1AEE1C46061B00EABA25 /* Debug */,
+				BA5C1AEF1C46061B00EABA25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5C1AF01C46061B00EABA25 /* Build configuration list for PBXNativeTarget "TianDiTuWMTSDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5C1AF11C46061B00EABA25 /* Debug */,
+				BA5C1AF21C46061B00EABA25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA5C1AB51C46061A00EABA25 /* Project object */;
+}
