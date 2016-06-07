@@ -1,6 +1,5 @@
 # ArcGIS_TianDiTuWMTS
 使用天地图WMTS-基于&lt;ArcGIS Runtime SDK for iOS 10.2.5>   
-###### 因公司业务需要使用ArcGIS加载天地图，所以将自己学习ArcGIS过程中写的一些Demo发到GitHub上来，希望大家在使用过程中有什么问题多多交流
 ##### 使用方法
 * 1 建立图层容器（AGSMapView)  
 
