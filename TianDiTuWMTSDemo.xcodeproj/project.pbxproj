@@ -301,7 +301,7 @@
 				TargetAttributes = {
 					BA5C1ABC1C46061A00EABA25 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = W8B5MRX38C;
+						DevelopmentTeam = K9BFUMUYTB;
 					};
 					BA5C1AD51C46061B00EABA25 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -638,6 +638,7 @@
 			baseConfigurationReference = 6452CECD54AF9FD52ED0915F /* Pods-TianDiTuWMTSDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BFUMUYTB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = "$(SRCROOT)/TianDiTuWMTSDemo/Supporting Files/Info.plist";
@@ -662,6 +663,7 @@
 			baseConfigurationReference = EE03DBE69467C53651CD1AB7 /* Pods-TianDiTuWMTSDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BFUMUYTB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = "$(SRCROOT)/TianDiTuWMTSDemo/Supporting Files/Info.plist";
