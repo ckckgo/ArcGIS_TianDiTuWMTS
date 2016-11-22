@@ -1,12 +1,13 @@
 //
-//  TianMapInfo.m
-//  Install and setup
+//  TianMapSchema.m
+//  TianMapLayer
 //
-//  Created by roger on 16/1/12.
-//  Copyright © 2016年 roger. All rights reserved.
+//  Created by Henry on 11/22/16.
+//  Copyright © 2016 Henry. All rights reserved.
 //
 
-#import "TianMapInfo.h"
+#import "TianMapSchema.h"
+
 //mecator
 #define kURL_VECTOR_MERCATOR @"http://t0.tianditu.com/vec_w/wmts"
 #define kURL_VECTOR_ANNOTATION_CHINESE_MERCATOR @"http://t0.tianditu.com/cva_w/wmts"
@@ -61,21 +62,29 @@
 #define kTILE_HEIGHT 256
 #define kDPI 96
 
-@interface TianMapInfo ()
+
+@interface TianMapSchema ()
+
+@property (nonatomic, strong, readwrite) AGSSpatialReference *spatialReference;
+@property (nonatomic, strong, readwrite) AGSEnvelope *fullEnvelope;
+@property (nonatomic, strong, readwrite) AGSTileInfo *tileInfo;
+@property (nonatomic, copy, readwrite) NSString *layerName;
+@property (nonatomic, copy, readwrite) NSString *tileMatrixSet;
 
 @end
 
-@implementation TianMapInfo
-+ (instancetype)infoWithLayerType:(TianMapType)layerType {
-    TianMapInfo *layerInfo = [[self alloc] init];
+@implementation TianMapSchema
+
++ (instancetype)schemaWithMapType:(TianMapType)mapType {
+    TianMapSchema *schema = [[self alloc] init];
     
     double xMin, yMin, xMax, yMax;
     AGSSpatialReference *sr;
     AGSPoint *origin;
     NSMutableArray *lods;
     
-    if (layerType < 8) { //墨卡托
-        layerInfo.tileMatrixSet = kTILE_MATRIX_SET_MERCATOR;
+    if (mapType < 8) { //墨卡托
+        schema.tileMatrixSet = kTILE_MATRIX_SET_MERCATOR;
         
         xMin = X_MIN_MERCATOR;
         yMin = Y_MIN_MERCATOR;
@@ -105,7 +114,7 @@
                 [[AGSLOD alloc] initWithLevel:18 resolution:0.5971642834779395 scale: 2256.998866688275],
                 nil];
     } else { // 国标2000
-        layerInfo.tileMatrixSet = kTILE_MATRIX_SET_2000;
+        schema.tileMatrixSet = kTILE_MATRIX_SET_2000;
         
         xMin = X_MIN_2000;
         yMin = Y_MIN_2000;
@@ -137,88 +146,89 @@
     }
     
     // other params
-    switch (layerType) {
+    switch (mapType) {
         case 0:
-            layerInfo.baseUrl= kURL_VECTOR_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_VECTOR;
+            schema.baseUrl= kURL_VECTOR_MERCATOR;
+            schema.layerName = kLAYER_NAME_VECTOR;
             break;
         case 1:
-            layerInfo.baseUrl= kURL_VECTOR_ANNOTATION_CHINESE_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_VECTOR_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_VECTOR_ANNOTATION_CHINESE_MERCATOR;
+            schema.layerName = kLAYER_NAME_VECTOR_ANNOTATION_CHINESE;
             break;
         case 2:
-            layerInfo.baseUrl= kURL_VECTOR_ANNOTATION_ENGLISH_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_VECTOR_ANNOTATION_ENGLISH;
+            schema.baseUrl= kURL_VECTOR_ANNOTATION_ENGLISH_MERCATOR;
+            schema.layerName = kLAYER_NAME_VECTOR_ANNOTATION_ENGLISH;
             break;
         case 3:
-            layerInfo.baseUrl= kURL_IMAGE_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_IMAGE;
+            schema.baseUrl= kURL_IMAGE_MERCATOR;
+            schema.layerName = kLAYER_NAME_IMAGE;
             break;
         case 4:
-            layerInfo.baseUrl= kURL_IMAGE_ANNOTATION_CHINESE_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_IMAGE_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_IMAGE_ANNOTATION_CHINESE_MERCATOR;
+            schema.layerName = kLAYER_NAME_IMAGE_ANNOTATION_CHINESE;
             break;
         case 5:
-            layerInfo.baseUrl= kURL_IMAGE_ANNOTATION_ENGLISH_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_IMAGE_ANNOTATION_ENGLISH;
+            schema.baseUrl= kURL_IMAGE_ANNOTATION_ENGLISH_MERCATOR;
+            schema.layerName = kLAYER_NAME_IMAGE_ANNOTATION_ENGLISH;
             break;
         case 6:
-            layerInfo.baseUrl= kURL_TERRAIN_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_TERRAIN;
+            schema.baseUrl= kURL_TERRAIN_MERCATOR;
+            schema.layerName = kLAYER_NAME_TERRAIN;
             break;
         case 7:
-            layerInfo.baseUrl= kURL_TERRAIN_ANNOTATION_CHINESE_MERCATOR;
-            layerInfo.layerName = kLAYER_NAME_TERRAIN_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_TERRAIN_ANNOTATION_CHINESE_MERCATOR;
+            schema.layerName = kLAYER_NAME_TERRAIN_ANNOTATION_CHINESE;
             break;
         case 8:
-            layerInfo.baseUrl= kURL_VECTOR_2000;
-            layerInfo.layerName = kLAYER_NAME_VECTOR;
+            schema.baseUrl= kURL_VECTOR_2000;
+            schema.layerName = kLAYER_NAME_VECTOR;
             break;
         case 9:
-            layerInfo.baseUrl= kURL_VECTOR_ANNOTATION_CHINESE_2000;
-            layerInfo.layerName = kLAYER_NAME_VECTOR_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_VECTOR_ANNOTATION_CHINESE_2000;
+            schema.layerName = kLAYER_NAME_VECTOR_ANNOTATION_CHINESE;
             break;
         case 10:
-            layerInfo.baseUrl= kURL_VECTOR_ANNOTATION_ENGLISH_2000;
-            layerInfo.layerName = kLAYER_NAME_VECTOR_ANNOTATION_ENGLISH;
+            schema.baseUrl= kURL_VECTOR_ANNOTATION_ENGLISH_2000;
+            schema.layerName = kLAYER_NAME_VECTOR_ANNOTATION_ENGLISH;
             break;
         case 11:
-            layerInfo.baseUrl= kURL_IMAGE_2000;
-            layerInfo.layerName = kLAYER_NAME_IMAGE;
+            schema.baseUrl= kURL_IMAGE_2000;
+            schema.layerName = kLAYER_NAME_IMAGE;
             break;
         case 12:
-            layerInfo.baseUrl= kURL_IMAGE_ANNOTATION_CHINESE_2000;
-            layerInfo.layerName = kLAYER_NAME_IMAGE_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_IMAGE_ANNOTATION_CHINESE_2000;
+            schema.layerName = kLAYER_NAME_IMAGE_ANNOTATION_CHINESE;
             break;
         case 13:
-            layerInfo.baseUrl= kURL_IMAGE_ANNOTATION_ENGLISH_2000;
-            layerInfo.layerName = kLAYER_NAME_IMAGE_ANNOTATION_ENGLISH;
+            schema.baseUrl= kURL_IMAGE_ANNOTATION_ENGLISH_2000;
+            schema.layerName = kLAYER_NAME_IMAGE_ANNOTATION_ENGLISH;
             break;
         case 14:
-            layerInfo.baseUrl= kURL_TERRAIN_2000;
-            layerInfo.layerName = kLAYER_NAME_TERRAIN;
+            schema.baseUrl= kURL_TERRAIN_2000;
+            schema.layerName = kLAYER_NAME_TERRAIN;
             break;
         case 15:
-            layerInfo.baseUrl= kURL_TERRAIN_ANNOTATION_CHINESE_2000;
-            layerInfo.layerName = kLAYER_NAME_TERRAIN_ANNOTATION_CHINESE;
+            schema.baseUrl= kURL_TERRAIN_ANNOTATION_CHINESE_2000;
+            schema.layerName = kLAYER_NAME_TERRAIN_ANNOTATION_CHINESE;
             break;
         default:
             break;
     }
     
-    layerInfo.fullEnvelope = [[AGSEnvelope alloc] initWithXmin:xMin
-                                                          ymin:yMin
-                                                          xmax:xMax
-                                                          ymax:yMax
-                                              spatialReference:sr];
-
-    layerInfo.tileInfo = [[AGSTileInfo alloc] initWithDpi:kDPI
-                                                   format:@"PNG"
-                                                     lods:[lods copy]
-                                                   origin:origin
-                                         spatialReference:sr
-                                                 tileSize:CGSizeMake(kTILE_WIDTH, kTILE_HEIGHT)];
+    schema.fullEnvelope = [[AGSEnvelope alloc] initWithXmin:xMin
+                                                       ymin:yMin
+                                                       xmax:xMax
+                                                       ymax:yMax
+                                           spatialReference:sr];
     
-    return layerInfo;
+    schema.tileInfo = [[AGSTileInfo alloc] initWithDpi:kDPI
+                                                format:@"PNG"
+                                                  lods:[lods copy]
+                                                origin:origin
+                                      spatialReference:sr
+                                              tileSize:CGSizeMake(kTILE_WIDTH, kTILE_HEIGHT)];
+    
+    return schema;
 }
+
 @end

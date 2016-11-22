@@ -23,11 +23,10 @@
     self.mapView = mapView;
     [self.view addSubview:mapView];
     
-    NSError *error;
-    TianMapLayer *vectorLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVector2000 localServiceURL:nil error:&error];
+    TianMapLayer *vectorLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVector2000 localServiceURL:nil];
     [self.mapView addMapLayer:vectorLayer withName:@"Vector2000"];
     
-    TianMapLayer *annoLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVectorAnnotationChinese2000 localServiceURL:nil error:&error];
+    TianMapLayer *annoLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVectorAnnotationChinese2000 localServiceURL:nil];
     [self.mapView addMapLayer:annoLayer withName:@"VectorAnnotationChinese2000"];
     
     self.mapView.layerDelegate = self;

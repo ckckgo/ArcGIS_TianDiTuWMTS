@@ -1,76 +1,59 @@
 //
 //  TianMapLayer.m
-//  Install and setup
+//  TianMapLayer
 //
-//  Created by roger on 16/1/12.
-//  Copyright © 2016年 roger. All rights reserved.
+//  Created by Henry on 11/22/16.
+//  Copyright © 2016 Henry. All rights reserved.
 //
 
 #import "TianMapLayer.h"
-#import "TianMapInfo.h"
-#import "TianMapOperation.h"
+#import "TianMapSchema.h"
+
+#define kPath_Request_Tiled @"%@?service=wmts&request=gettile&version=1.0.0&layer=%@&STYLE=default&tilematrixset=%@&tilematrix=%tu&tilerow=%tu&tilecol=%tu&format=tiles"
+
+@interface TianMapLayer()
+
+@property (nonatomic, strong) TianMapSchema *schema;
+
+/**
+ Override super class
+ */
+@property (nonatomic, strong) AGSEnvelope *fullEnvelope;
+@property (nonatomic, strong) AGSTileInfo *tileInfo;
+
+@end
 
 @implementation TianMapLayer
 
-- (instancetype)initWithType:(TianMapType)layerType localServiceURL:(NSString *)url error:(NSError *__autoreleasing *)error {
-    if (self = [super init]) {
-        TianMapInfo *layerInfo = [TianMapInfo infoWithLayerType:layerType];
-        self.layerInfo = layerInfo;
-        
-        if (url) {
-            layerInfo.baseUrl = url;
-        }
-        _fullEnvelope = layerInfo.fullEnvelope;
-        _tileInfo = layerInfo.tileInfo;
-        [_tileInfo computeTileBounds:self.fullEnvelope];
-        [super layerDidLoad];
+@synthesize fullEnvelope, tileInfo;
+
+- (instancetype)initWithType:(TianMapType)layerType localServiceURL:(NSString *)url {
+    self = [super init];
+    if (!self) {
+        return nil;
     }
+    
+    TianMapSchema *schema = [TianMapSchema schemaWithMapType:layerType];
+    self.schema = schema;
+
+    if (url) {
+        self.schema.baseUrl = url;
+    }
+    
+    self.fullEnvelope = schema.fullEnvelope;
+    self.tileInfo = schema.tileInfo;
+//    [self.tileInfo computeTileBounds:self.fullEnvelope];
+    [super layerDidLoad];
+    
     return self;
 }
 
-#pragma mark-
-- (void)requestTileForKey:(AGSTileKey *)key {
-    TianMapOperation *operation = [[TianMapOperation alloc] initWithTileKey:key
-                                                             tiledLayerInfo:self.layerInfo complete:^(NSData *imageData, AGSTileKey *tileKey) {
-                                                                 [super setTileData:imageData forKey:tileKey];
-                                                             }];
-    [self.requestQueue addOperation:operation];
+#pragma mark- Override
+
+-(NSURL*)urlForTileKey:(AGSTileKey*)key {
+    NSString *strUrl = [NSString stringWithFormat:kPath_Request_Tiled, self.schema.baseUrl, self.schema.layerName, self.schema.tileMatrixSet, key.level, key.row, key.column];
+    return [NSURL URLWithString:strUrl];
 }
 
-- (void)cancelRequestForKey:(AGSTileKey *)key {
-    for (NSOperation *op in [AGSRequestOperation sharedOperationQueue].operations) {
-        if ([op isKindOfClass:[TianMapOperation class]]) {
-            TianMapOperation *offOp = (TianMapOperation *)op;
-            if ([offOp.tileKey isEqualToTileKey:key]) {
-                [offOp cancel];
-            }
-        }
-    }
-}
 
-//- (void)didFinishOperation:(TianMapOperation *)op {
-//    [super setTileData:op.imageData forKey:op.tileKey];
-//}
-
-#pragma mark- 重写getter
-- (AGSTileInfo *)tileInfo {
-    return _tileInfo;
-}
-
-- (AGSEnvelope *)fullEnvelope {
-    return _fullEnvelope;
-}
-
-- (AGSSpatialReference *)spatialReference {
-    return _fullEnvelope.spatialReference;
-}
-
-#pragma mark- lazyLoad
-- (NSOperationQueue *)requestQueue {
-    if (_requestQueue == nil) {
-        _requestQueue = [[NSOperationQueue alloc] init];
-        _requestQueue.maxConcurrentOperationCount = 16;
-    }
-    return _requestQueue;
-}
 @end

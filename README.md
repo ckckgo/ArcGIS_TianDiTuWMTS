@@ -14,11 +14,11 @@
 ````  
     NSError *error;
 //    矢量地图层
-    TianMapLayer *vectorLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVector2000 localServiceURL:nil error:&error];
+    TianMapLayer *vectorLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVector2000 localServiceURL:nil];
     [self.mapView addMapLayer:vectorLayer withName:@"Vector2000"];
     
 //    中文标注层
-    TianMapLayer *annoLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVectorAnnotationChinese2000 localServiceURL:nil error:&error];
+    TianMapLayer *annoLayer = [[TianMapLayer alloc] initWithType:TianMapTypeVectorAnnotationChinese2000 localServiceURL:nil];
     [self.mapView addMapLayer:annoLayer withName:@"VectorAnnotationChinese2000"];
 ````
 * 3 加载完成后显示用户中心

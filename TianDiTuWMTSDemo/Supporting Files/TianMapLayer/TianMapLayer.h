@@ -1,13 +1,12 @@
 //
 //  TianMapLayer.h
-//  Install and setup
+//  TianMapLayer
 //
-//  Created by roger on 16/1/12.
-//  Copyright © 2016年 roger. All rights reserved.
+//  Created by Henry on 11/22/16.
+//  Copyright © 2016 Henry. All rights reserved.
 //
 
 #import <ArcGIS/ArcGIS.h>
-@class TianMapInfo;
 
 typedef NS_ENUM(NSInteger, TianMapType) {
     TianMapTypeVectorMercator = 0, ///<天地图矢量墨卡托投影地图服务
@@ -29,14 +28,9 @@ typedef NS_ENUM(NSInteger, TianMapType) {
     TianMapTypeTerrainAnnotationChinese2000, ///<天地图地形国家2000坐标系中文标注
 };
 
-@interface TianMapLayer : AGSTiledServiceLayer
-{
-    AGSTileInfo *_tileInfo;
-    AGSEnvelope *_fullEnvelope;
-    AGSSpatialReference *_spatialReference;
-}
-@property (nonatomic, strong) TianMapInfo *layerInfo; ///< customerTileLayerInfo
-@property (nonatomic, strong) NSOperationQueue *requestQueue; ///< 队列
 
-- (instancetype)initWithType:(TianMapType)layerType localServiceURL:(NSString *)url error:(NSError **)error;
+@interface TianMapLayer : AGSTiledServiceLayer
+
+- (instancetype)initWithType:(TianMapType)layerType localServiceURL:(NSString *)url;
+
 @end
